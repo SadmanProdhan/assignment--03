@@ -1,11 +1,13 @@
+//problem-01 --------------------------------------------------------------------------//
+
 function newPrice(currentPrice, discount) {
     // Your code here
-    if( typeof currentPrice !== "number" && typeof discount !== "number"){
-        return Invalid;
+    if( typeof currentPrice !== "number" || typeof discount !== "number"){
+        return "Invalid";
     }
     if (discount < 0 || discount > 100){
-        return Invalid;
+        return "Invalid";
     }
     let finalPrice = currentPrice - discount*currentPrice/100;
-    return finalPrice.tofixed(3)
+    return finalPrice.toFixed(3);
 }
