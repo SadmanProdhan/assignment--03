@@ -39,3 +39,33 @@ function finalScore(omr) {
 }
 
 //
+
+//problem-04 -------------------------------------//
+
+function gonoVote(array) {
+    //write your code here
+    let countHA = 0;
+    let countNA = 0;
+    if( !Array.isArray(array) || array === "" ){
+        return "Invalid"
+    }
+    for (let i = 0; i < array.length; i++){
+        if( array[i] === 'ha'){
+            countHA++;
+        }
+        else if( array[i] === 'na'){
+            countNA++;
+        }
+    }
+    if( countHA > countNA){
+        return true;
+    }
+    else if( countNA > countHA){
+        return false;
+    }
+    else if( countHA == countNA ){
+        return "equal"
+    }
+}
+
+//-------------------------------------------------------------------------------
